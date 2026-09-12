@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Virakboth Hassan - Portfolio</title>
+        <style>
+            body {
+                font-family:
+                    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+                    "Lucida Sans", Arial, sans-serif;
+            }
+
+            /* Navigation Bar */
+
+            #home {
+                background-color: #7600bc;
+                padding-bottom: 1cm;
+                margin-left: -1cm;
+                margin-right: -1cm;
+                margin-top: -1cm;
+                padding-top: 2cm;
+                padding-bottom: 2cm;
+                height: 5mm;
+            }
+
+            .topmenu {
+                color: lightgray;
+                margin: 10px;
+                padding: 20px;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+            .topmenu:hover {
+                color: white;
+                font-weight: bolder;
+                text-decoration: underline;
+            }
+
+            .topdiv {
+                float: right;
+                padding-right: 1cm;
+            }
+
+            .profile_name {
+                float: left;
+                padding-left: 2cm;
+                color: aliceblue;
+                font-weight: bolder;
+                font-size: 30px;
+            }
+
+            .profile_name .contact_info {
+                font-size: 15px;
+                font-style: italic;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            .contact_info img {
+                width: 25px;
+                margin-right: 10px;
+                float: left;
+            }
+
+            /* Titles */
+
+            h2 {
+                text-align: justify;
+                font-size: 50px;
+                text-align: center;
+                float: left;
+                color: #7600bc;
+                margin: 30px;
+                margin-left: 60px;
+                margin-top: 40px;
+                margin-bottom: 0px;
+            }
+
+            .introduction {
+                text-align: justify;
+                font-size: 30px;
+                text-align: center;
+                float: left;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                animation-duration: 5s;
+                position: relative;
+            }
+
+            /* Used in the About Me sections */
+
+            .container {
+                display: flex;
+            }
+
+            /* About Me */
+
+            .about-me {
+                display: flex;
+                align-items: center;
+            }
+
+            #about-me h1 {
+                font-size: 65px;
+                margin-top: 90px;
+                color: #7600bc;
+            }
+
+            #about-me p {
+                font-size: 25px;
+                color: rgb(128, 128, 128);
+                margin-top: -1cm;
+            }
+
+            .profile_image {
+                width: 550px;
+                height: fit-content;
+                vertical-align: middle;
+                margin: 5px;
+            }
+
+            /* Skills */
+
+            .all_skills {
+                display: flex;
+                flex-direction: row;
+                flex-flow: wrap;
+            }
+
+            .skill {
+                border: 1px solid gray;
+                display: block;
+                border-radius: 6px;
+                text-align: center;
+                margin: 50px;
+                padding: 10px;
+                width: 2in;
+                font-size: 20px;
+                box-shadow: 0 3px 10px gray;
+            }
+
+            .skill img {
+                height: 35px;
+                align-items: center;
+            }
+
+            .skills h6 {
+                align-items: center;
+                font-size: 20px;
+                margin-block-start: 8px;
+                margin-block-end: 5px;
+                font-weight: bold;
+            }
+
+            .skills p {
+                align-items: center;
+                font-size: 15px;
+                color: gray;
+                margin-block-start: 5px;
+                margin-block-end: 5px;
+            }
+
+            .flex_center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Projects */
+
+            .projects-container {
+                margin-top: 30px;
+                margin-left: 60px;
+            }
+
+            .projects-container hr {
+                border: 1px solid lightgray;
+                width: 75%;
+                margin-left: 5cm;
+            }
+
+            .project-card {
+                margin: 0 15px 15px 30px;
+                padding-bottom: 5px;
+            }
+
+            .project-card h3 {
+                font-size: 25px;
+                margin-left: 30px;
+            }
+
+            .project-card li {
+                font-size: 20px;
+                margin-left: 30px;
+            }
+
+            /* Recommendations */
+
+            .all_recommendations {
+                display: flex;
+                align-items: center;
+                margin-left: 1in;
+                flex-direction: row;
+                flex-flow: wrap;
+                padding: 20px;
+            }
+
+            .recommendation {
+                font-style: italic;
+                text-align: left;
+                width: 21.875rem;
+                padding: 1rem;
+                background-color: #fff;
+                border-radius: 11px;
+                box-shadow: 0 3px 10px var(--primary-shadow);
+                padding: 20px;
+                margin: 10px;
+                border: 1px solid gray;
+                font-size: 18px;
+                height: 150px;
+            }
+
+            .recommendation span {
+                color: #7600bc;
+                font-size: 20px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            /* Scroll to Top Button */
+
+            .iconbutton {
+                width: 48px;
+                height: 48px;
+                border-radius: 100%;
+                background-color: #7600bc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                right: 3%;
+                bottom: 3%;
+                cursor: pointer;
+            }
+
+            /* Form Pop-up */
+
+            .popup {
+                width: 400px;
+                background-color: #e8bcf0;
+                border-radius: 3mm;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                position: fixed;
+                /* padding: 30px; */
+                visibility: hidden;
+            }
+
+            .popup img {
+                padding-top: 20px;
+            }
+
+            .popup button {
+                background-color: #fff;
+                border: 1px solid #7600bc;
+                color: #7600bc;
+                display: block;
+                border-radius: 6px;
+                text-align: center;
+                margin: 50px;
+                padding: 10px;
+                width: 2in;
+                font-size: 20px;
+                margin-left: 25%;
+            }
+
+            .popup button:hover {
+                background-color: #fff;
+                border: 2px solid #7600bc;
+                color: #7600bc;
+                display: block;
+                font-weight: bolder;
+                text-align: center;
+                cursor: pointer;
+                margin-left: 25%;
+            }
+
+            /* Recommendation Form */
+
+            input,
+            textarea {
+                font-family:
+                    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+                    "Lucida Sans", Arial, sans-serif;
+                margin: 10px;
+                width: 100%;
+            }
+
+            fieldset {
+                display: flexbox;
+                align-content: center;
+                justify-content: center;
+                padding: 25px;
+                margin-left: 50px;
+                margin-right: 50px;
+                border: thin solid white;
+                width: 50%;
+            }
+
+            /* Buttons */
+
+            button {
+                background-color: #fff;
+                border: 1px solid #7600bc;
+                color: #7600bc;
+                display: block;
+                border-radius: 6px;
+                text-align: center;
+                margin: 50px;
+                padding: 10px;
+                width: 2in;
+                font-size: 20px;
+            }
+
+            button:hover {
+                background-color: #7600bc;
+                border: 1px solid #7600bc;
+                color: #fff;
+                display: block;
+                border-radius: 6px;
+                text-align: center;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <div id="home">
+                <div class="profile_name">
+                    Virakboth Soth
+                    <div class="contact_info">
+                        <img
+                            src="html_finalprojimages/envelope.png"
+                            alt="https://icons8.com/icon/124377/circled-envelope"
+                        />
+                        vkbh@example.com
+                    </div>
+                    <div style="clear: both"></div>
+                    <div class="contact_info">
+                        <img
+                            src="html_finalprojimages/phone.png"
+                            alt="https://icons8.com/icon/124377/circled-envelope"
+                        />
+                        +000000
+                    </div>
+                </div>
+                <div class="topdiv">
+                    <a class="topmenu" href="#about-me">About Me</a>
+                    <a class="topmenu" href="#Skills">Skills</a>
+                    <a class="topmenu" href="#Projects">Projects</a>
+                    <a class="topmenu" href="#Recommendations"
+                        >Recommendations</a
+                    >
+                    <!-- Add the links for Skills, Projects and Recommendation here -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- About Me -->
+        <section id="about-me" class="container">
+            <div>
+                <img
+                    src="https://miro.medium.com/max/1400/1*qdAW1TjCN57h1lbuuzvchg.gif"
+                    class="profile_image"
+                />
+            </div>
+
+            <div>
+                <h1>
+                    Hi, I'm Virakboth!
+                    <img
+                        src="https://twemoji.maxcdn.com/2/72x72/1f44b.png"
+                        width="60px"
+                    />
+                </h1>
+                <p>
+                    I am a young full-stack but front-end focused developer that
+                    has been learning since 2023, I am very interested into
+                    learning new front-end frameworks like Astro and Vue
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div style="clear: both"></div>
+
+            <div class="all_skills">
+                <div class="skill">
+                    <img src="html_finalprojimages/py.png" />
+                    <h6>Python</h6>
+                    <p>4 years experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/html5.png" />
+                    <h6>HTML</h6>
+                    <p>3 years experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/CSS3.png" />
+                    <h6>CSS</h6>
+                    <p>3 years experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/js.jpeg" />
+                    <h6>JavaScript</h6>
+                    <p>3 years experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/java.png" />
+                    <h6>Java</h6>
+                    <p>1 year experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/node.png" />
+                    <h6>Node JS</h6>
+                    <p>1 year experience</p>
+                </div>
+
+                <div class="skill">
+                    <img src="html_finalprojimages/react.png" />
+                    <h6>React JS</h6>
+                    <p>1 year experience</p>
+                </div>
+
+                <!-- Add more skills here -->
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div style="clear: both"></div>
+
+            <div id="projects-container" class="projects-container">
+                <div class="project-card">
+                    <h3>Cybersecurity Website</h3>
+                    <ul>
+                        <li>
+                            Developed a simple Cybersecurity Tips website that
+                            teaches you about common cybersecurity practices,
+                            malware, and etc. to stay safe online
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div style="clear: both"></div>
+
+        <!-- Recommendations -->
+        <section id="recommendations">
+            <h2>Recommendations</h2>
+            <div style="clear: both"></div>
+            <div class="all_recommendations" id="all_recommendations">
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    Virakboth is very smart and grasps onto things which are
+                    related to web development so quickly that it saves a lot of
+                    time which helps us in make him learn new concepts which
+                    were useful for our company other than the basic concepts
+                    taught to trainees.
+                    <span>&#8221;</span>
+                </div>
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    In short, I wholeheartedly recommend Virakboth for any
+                    project or team. He is a valuable asset, and his
+                    contributions will undoubtedly enhance any endeavor he
+                    chooses to undertake."
+                    <span>&#8221;</span>
+                </div>
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    Working with Virakboth was a pleasure. His dedication to
+                    excellence and positive attitude make him a standout
+                    colleague.
+                    <span>&#8221;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation Form -->
+        <section id="contact">
+            <div class="flex_center">
+                <fieldset>
+                    <legend class="introduction">Leave a Recommendation</legend>
+                    <input type="text" placeholder="Name (Optional)" /> <br />
+                    <textarea
+                        id="new_recommendation"
+                        cols="500"
+                        rows="10"
+                        placeholder="Message"
+                    ></textarea>
+                    <div class="flex_center">
+                        <button
+                            id="recommend_btn"
+                            onclick="addRecommendation()"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+        <div class="iconbutton">
+            <a href="#home">
+                <!--Add the code here for the logo to appear and the icon to be actionable-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="white"
+                    width="63px"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+            </a>
+        </div>
+
+        <div class="popup" id="popup" class="flex_center">
+            <img src="html_finalprojimages/checkmark--outline.svg" />
+            <h3><!-- Add appropriate text here--></h3>
+            <button onclick="showPopup(false)">Ok</button>
+        </div>
+
+        <script>
+            function addRecommendation() {
+                // Get the message of the new recommendation
+                let recommendation =
+                    document.getElementById("new_recommendation");
+                // If the user has left a recommendation, display a pop-up
+                if (
+                    recommendation.value != null &&
+                    recommendation.value.trim() != ""
+                ) {
+                    console.log("New recommendation added");
+                    //Call showPopup here
+
+                    // Create a new 'recommendation' element and set it's value to the user's message
+                    var element = document.createElement("div");
+                    element.setAttribute("class", "recommendation");
+                    element.innerHTML =
+                        "\<span\>&#8220;\</span\>" +
+                        recommendation.value +
+                        "\<span\>&#8221;\</span\>";
+                    // Add this element to the end of the list of recommendations
+                    document
+                        .getElementById("all_recommendations")
+                        .appendChild(element);
+
+                    // Reset the value of the textarea
+                    recommendation.value = "";
+                    showPopup(true);
+                }
+            }
+
+            function showPopup(bool) {
+                if (bool) {
+                    document.getElementById("popup").style.visibility =
+                        "visible";
+                } else {
+                    document.getElementById("popup").style.visibility =
+                        "hidden";
+                }
+            }
+        </script>
+    </body>
+</html>
