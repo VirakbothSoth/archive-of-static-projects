@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Virakboth's Weather - 5d Forecast</title>
+      <link
+         rel="stylesheet"
+         href="bootstrap-5.3.8-dist/css/bootstrap.min.css"
+         />
+      <link
+         rel="stylesheet"
+         href="bootstrap-5.3.8-dist/css/bootstrap-grid.min.css"
+         />
+      <link rel="stylesheet" href="css/styles.css" />
+   </head>
+   <body class="sanc-bg">
+      <nav class="mb-3 sanc-primary row">
+         <div
+            style="height: 4rem"
+            class="d-flex justify-content-between align-items-center px-5"
+            >
+            <h1 class="text-secondary fw-bold text-center">My Weather</h1>
+            <div class="input-group my-5" style="width: 500px">
+               <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Phnom Penh"
+                  value=""
+                  id="searchBox"
+                  />
+               <button type="button" id="searchButton">Search</button>
+            </div>
+         </div>
+         <div class="sanc-secondary actual-nav px-5">
+            <a href="index.html"> Today </a>
+            <a class="active-a" href="#"> 5-day forecast </>
+         </div>
+      </nav>
+      <div class="px-5">
+         <div class="m-3 p-3">
+            <div class="row" id="dailyForecast"></div>
+         </div>
+         <div class="m-3 p-3 sanc-primary align-items-center">
+            <div class="d-flex justify-content-between text-muted fw-bold">
+               <h4>Hourly</h4>
+            </div>
+            <table class="table">
+               <tr>
+                  <th>Today</th>
+                  <th id="minus5">1pm</th>
+                  <th id="minus4">1pm</th>
+                  <th id="minus3">1pm</th>
+                  <th id="minus2">1pm</th>
+                  <th id="minus1">1pm</th>
+                  <th id="now">1pm</th>
+               </tr>
+               <tr id="weatherIcons">
+                  <td></td>
+                  <td>
+                     <img
+                        id="icon-now"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+                  <td>
+                     <img
+                        id="icon-minus1"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+                  <td>
+                     <img
+                        id="icon-minus2"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+                  <td>
+                     <img
+                        id="icon-minus3"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+                  <td>
+                     <img
+                        id="icon-minus4"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+                  <td>
+                     <img
+                        id="icon-minus5"
+                        src="https://openweathermap.org/payload/api/media/file/01d.png"
+                        />
+                  </td>
+               </tr>
+               <tr>
+                  <td>Forecast</td>
+                  <td id="forecast-now">--</td>
+                  <td id="forecast-minus1">--</td>
+                  <td id="forecast-minus2">--</td>
+                  <td id="forecast-minus3">--</td>
+                  <td id="forecast-minus4">--</td>
+                  <td id="forecast-minus5">--</td>
+               </tr>
+               <tr>
+                  <td>Temp / Feel</td>
+                  <td id="temp-now">--</td>
+                  <td id="temp-minus1">--</td>
+                  <td id="temp-minus2">--</td>
+                  <td id="temp-minus3">--</td>
+                  <td id="temp-minus4">--</td>
+                  <td id="temp-minus5">--</td>
+               </tr>
+               <tr>
+                  <td>Wind (km/h)</td>
+                  <td id="wind-now">--</td>
+                  <td id="wind-minus1">--</td>
+                  <td id="wind-minus2">--</td>
+                  <td id="wind-minus3">--</td>
+                  <td id="wind-minus4">--</td>
+                  <td id="wind-minus5">--</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+      <script src="js/scripts.js"></script>
+   </body>
+</html>

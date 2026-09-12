@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404</title>
+
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.3.8-dist/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.3.8-dist/css/bootstrap-grid.min.css"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body class="sanc-bg">
+        <nav class="mb-3 sanc-primary">
+            <div
+                style="height: 4rem"
+                class="d-flex justify-content-between align-items-center px-5"
+            >
+                <h1 class="text-secondary fw-bold text-center">My Weather</h1>
+                <div class="input-group my-5" style="width: 500px">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Phnom Penh"
+                        value=""
+                        id="searchBox"
+                    />
+                    <button type="button" id="searchButton">Search</button>
+                </div>
+            </div>
+
+            <div class="sanc-secondary actual-nav px-5">
+                <a href="index.html"> Today </a>
+                <a href="fiveDayForecast.html"> 5-day forecast </>
+            </div>
+        </nav>
+
+        <div class="px-5">
+            <div class="my-3 p-3 py-3 sanc-primary text-center">
+                <h2 class="fs-2 fw-bolder text-muted" id="locationNotFound">Not Found</h2>
+                <h3 class="fs-3 fw-bolder text-muted">Please Enter A Different Location</h3>
+            </div>
+        </div>
+        <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const locationName = params.get('location');
+            document.querySelector("#locationNotFound").innerHTML = `${locationName} Not Found!`;
+        </script>
+    </body>
+</html>

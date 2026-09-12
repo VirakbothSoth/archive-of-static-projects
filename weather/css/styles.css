@@ -1,0 +1,46 @@
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.sanc-primary {
+    background: #f6f6f6;
+}
+
+.sanc-bg {
+    background: #d7d7d7;
+}
+
+.sanc-secondary {
+    background: #404040;
+}
+
+.actual-nav a {
+    color: white !important;
+    padding: 0.1em 0.7em;
+    font-size: 1.7em;
+}
+
+.actual-nav .active-a {
+    border-style: none solid solid solid;
+    border-width: 3px 1px;
+    border-color: slateblue white;
+}
+
+#weatherIcons > td > img {
+    width: auto;
+    height: auto;
+}
+
+.nearby-place-item {
+    font-size: 1.5em;
+}
